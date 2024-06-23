@@ -1,4 +1,4 @@
-age = int(30 ("How old are you? "))
-years_until_2050 = 2050 -2023
-user_age_in_2050= age + years_until_2050
-print(f"In 2050, you will be {user_age_in_5050} years old.")
+current_age = int(input("How old are you?"))
+future_year = 2050
+age_in_2050 = current_age + (future_year - 2023)
+print(f"In {future_year} you will be {age_in_2050} years old.")
