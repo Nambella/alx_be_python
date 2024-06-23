@@ -3,3 +3,4 @@ Monthly expenses = int(input("Enter your monthly expenses:"))
 Monthly savings = Monthly income - Monthly expenses
 Interest = (Monthly savings * 12 * 0.05)
 Projected savings = (Monthly savings * 12 + (Monthly savings * 12 * 0.05))
+print(f"projected saving after one year: {projected savings:.2f}")
