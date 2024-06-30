@@ -11,9 +11,9 @@ elif operation == "*":
 elif operation == "/": 
     if num2 != 0:
         result = num1 / num2
-    else:
+    else :
         print("Error: Division by zero is not allowed.")
-else:
+else :
     print("Invalid operation. Please choose +, -, *, or /.")     
-if result is not None:
+if result is not None :
     print(f"The result is {result:.2f}")
