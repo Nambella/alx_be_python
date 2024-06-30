@@ -1,15 +1,14 @@
-# pattern_drawing.py
-def main():
-    try:
-        # Prompt user for pattern size
-        size = int(input("Enter the size of the pattern: "))
-        # Draw the square pattern
-        for row in range(size):
-            for col in range(size):
+# Prompt user for input
+try:
+    size = int(input("Enter the size of the pattern (positive integer): "))
+    if size <= 0:
+        print("Please enter a positive integer.")
+    else:
+        # Draw the pattern
+        for _ in range(size):
+            for _ in range(size):
                 print("*", end="")
             print()  # Move to the next row
-    except ValueError:
-        print("Invalid input. Please enter a positive integer.")
+except ValueError:
+    print("Invalid input. Please enter a positive integer.")
 
-if __name__ == "__main__":
-    main()
