@@ -8,6 +8,5 @@ def main():
             print()  # Move to the next row
     except ValueError:
         print("Invalid input. Please enter a positive integer.")
-
 if __name__ == "__main__":
     main()
