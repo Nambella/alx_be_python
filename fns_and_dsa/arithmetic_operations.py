@@ -1,14 +1,16 @@
-def perform_operation(operation, num1, num2):
+# arithmetic_operations.py
+
+def perform_operation(num1, num2, operation):
     """
     Performs basic arithmetic operations on two numbers.
 
     Args:
-        operation (str): The operation to perform ('add', 'subtract', 'multiply', 'divide').
-        num1 (float): The first number.
-        num2 (float): The second number.
+        num1 (float): First numerical value.
+        num2 (float): Second numerical value.
+        operation (str): The operation to perform ('add', 'subtract', 'multiply', or 'divide').
 
     Returns:
-        float: The result of the arithmetic operation.
+        float: Result of the arithmetic operation.
     """
     if operation == 'add':
         return num1 + num2
@@ -20,5 +22,9 @@ def perform_operation(operation, num1, num2):
         if num2 != 0:
             return num1 / num2
         else:
-            raise ValueError("Cannot divide by zero.")
+            return "Error: Division by zero"
+
+if __name__ == "__main__":
+    result = perform_operation(10, 5, 'add')
+    print(f"Result of addition: {result}")
 
