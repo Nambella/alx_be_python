@@ -5,6 +5,27 @@ def display_menu():
     print("3. View the list")
     print("4. Exit")
 
+def main():
+    shopping_list = []
+    while True:
+        display_menu()
+        choice = input("Enter your choice: ")
+
+        if choice == '1':
+            # Prompt for and add an item
+            pass
+        elif choice == '2':
+            # Prompt for and remove an item
+            pass
+        elif choice == '3':
+            # Display the shopping list
+            pass
+        elif choice == '4':
+            print("Goodbye!")
+            break
+        else:
+            print("Invalid choice. Please try again.")
+
 def add_item(shopping_list):
     item = input("Enter the item name: ")
     shopping_list.append(item)
@@ -22,23 +43,6 @@ def view_list(shopping_list):
     print("\nCurrent Shopping List:")
     for item in shopping_list:
         print(item)
-
-def main():
-    shopping_list = []
-    while True:
-        display_menu()
-        choice = input("Enter your choice (1-4): ")
-        if choice == '1':
-            add_item(shopping_list)
-        elif choice == '2':
-            remove_item(shopping_list)
-        elif choice == '3':
-            view_list(shopping_list)
-        elif choice == '4':
-            print("Exiting. Have a great day!")
-            break
-        else:
-            print("Invalid choice. Please select a valid option.")
 
 if __name__ == "__main__":
     main()
