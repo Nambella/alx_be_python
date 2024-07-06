@@ -1,5 +1,7 @@
+# shopping_list_manager.py
+
 def display_menu():
-    print("\nMenu:")
+    print("\nShopping List Manager")
     print("1. Add an item")
     print("2. Remove an item")
     print("3. View the list")
@@ -39,6 +41,7 @@ def main():
             break
         else:
             print("Invalid choice. Please select a valid option.")
-            
+
 if __name__ == "__main__":
     main()
+
