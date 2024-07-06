@@ -7,7 +7,7 @@ def perform_operation(num1, num2, operation):
     Args:
         num1 (float): First numerical value.
         num2 (float): Second numerical value.
-        operation (str): The operation to perform ('add', 'subtract', 'multiply', or 'divide').
+        operation (str): The operation to perform ('add', 'subtract', 'multiply', 'divide').
 
     Returns:
         float: Result of the arithmetic operation.
