@@ -1,24 +1,20 @@
 CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5
 FAHRENHEIT_TO_CELSIUS_FACTOR = 5 / 9
-
-
 def convert_to_celsius(fahrenheit):
     """
     Converts a temperature from Fahrenheit to Celsius.
     """
     celsius = (fahrenheit - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR
     return celsius
-
 def convert_to_fahrenheit(celsius):
     """
     Converts a temperature from Celsius to Fahrenheit.
     """
     fahrenheit = (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
     return fahrenheit
-
 def main():
     try:
-        user_input = input("Enter a temperature (e.g., 100F or 37C): ")
+        user_input = input("Enter a temperature: ")
         if user_input[-1].lower() == 'f':
             temperature = float(user_input[:-1])
             converted_temp = convert_to_celsius(temperature)
@@ -31,6 +27,5 @@ def main():
             raise ValueError("Invalid temperature format. Please enter a numeric value followed by 'F' or 'C'.")
     except ValueError:
         print("Invalid temperature. Please enter a numeric value.")
-
 if __name__ == "__main__":
     main()
