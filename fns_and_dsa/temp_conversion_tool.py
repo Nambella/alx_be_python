@@ -1,5 +1,5 @@
 FAHRENHEIT_TO_CELSIUS_FACTOR = 5 / 9
-CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5
+CELSIUS_TO_FAHRENHEIT_FACTOR= 9 / 5
 
 def convert_to_celsius(fahrenheit):
     """
@@ -27,7 +27,7 @@ def convert_to_fahrenheit(celsius):
 
 def main():
     try:
-        user_input = input("Enter a temperature (e.g., 98.6 F or 37.0 C): ")
+        user_input = input("Enter a temperature: ")
         temp, unit = user_input.split()
         temp = float(temp)
 
