@@ -1,12 +1,4 @@
-FAHRENHEIT_TO_CELSIUS_FACTOR = 5 / 9
 CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5
-
-def convert_to_celsius(fahrenheit):
-    """
-    Converts a temperature from Fahrenheit to Celsius.
-    """
-    celsius = (fahrenheit - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR
-    return celsius
 
 def convert_to_fahrenheit(celsius):
     """
@@ -19,10 +11,6 @@ def main():
     try:
         user_input = input("Enter a temperature (e.g., 100F or 37C): ")
         if user_input[-1].lower() == 'f':
-            temperature = float(user_input[:-1])
-            converted_temp = convert_to_celsius(temperature)
-            print(f"{temperature} Fahrenheit is equivalent to {converted_temp:.2f} Celsius.")
-        elif user_input[-1].lower() == 'c':
             temperature = float(user_input[:-1])
             converted_temp = convert_to_fahrenheit(temperature)
             print(f"{temperature} Celsius is equivalent to {converted_temp:.2f} Fahrenheit.")
