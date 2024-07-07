@@ -25,6 +25,10 @@ def main():
             break
         else:
             print("Invalid choice. Please try again.")
+def add_item(shopping_list):
+    item = input("Enter the item to add: ") 
+    shopping_list.append(item)
+    print(f"{item} added to the list.")
 
 if __name__ == "__main__":
     main()
