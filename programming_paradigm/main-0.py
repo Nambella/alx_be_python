@@ -1,31 +1,37 @@
-import sys
-from bank_account import BankAccount
+from library_management import Book, Library
 
 def main():
-    if len(sys.argv) < 2:
-        print("Usage: python main-0.py <initial_balance> <operation> <amount>")
-        return
+    library = Library()
 
-    initial_balance = float(sys.argv[1])
-    operation = sys.argv[2]
-    amount = float(sys.argv[3]) if len(sys.argv) > 3 else 0
+    # Adding books to the library
+    book1 = Book("The Great Gatsby", "F. Scott Fitzgerald")
+    book2 = Book("1984", "George Orwell")
+    book3 = Book("To Kill a Mockingbird", "Harper Lee")
 
-    account = BankAccount(initial_balance)
+    library.add_book(book1)
+    library.add_book(book2)
+    library.add_book(book3)
 
-    if operation == "deposit":
-        account.deposit(amount)
-        print(f"Deposited ${amount:.2f}")
-    elif operation == "withdraw":
-        if account.withdraw(amount):
-            print(f"Withdrew ${amount:.2f}")
-        else:
-            print("Insufficient funds")
-    elif operation == "balance":
-        account.display_balance()
+    # Listing available books
+    library.list_available_books()
+
+    # Checking out a book
+    if library.check_out_book("1984"):
+        print("Checked out '1984'")
     else:
-        print("Invalid operation. Use 'deposit', 'withdraw', or 'balance'.")
+        print("'1984' is not available")
 
-    account.display_balance()
+    # Listing available books after checkout
+    library.list_available_books()
+
+    # Returning a book
+    if library.return_book("1984"):
+        print("Returned '1984'")
+    else:
+        print("'1984' was not checked out")
+
+    # Listing available books after return
+    library.list_available_books()
 
 if __name__ == "__main__":
     main()
