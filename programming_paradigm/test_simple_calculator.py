@@ -16,14 +16,14 @@ class TestSimpleCalculator(unittest.TestCase):
 
     def test_multiplication(self):
         calc = SimpleCalculator()
-        self.assertEqual(self.calc.multiplication(3, 7), 21)
-        self.assertEqual(self.calc.multiplication(-1, 1), -1)
-        self.assertEqual(self.calc.multiplication(-1, -1), 1)
+        self.assertEqual(self.calc.multiply(3, 7), 21)
+        self.assertEqual(self.calc.multiply(-1, 1), -1)
+        self.assertEqual(self.calc.multiply(-1, -1), 1)
 
     def test_division(self):
         calc = SimpleCalculator()
-        self.assertEqual(self.calc.division(10, 2), 5)
-        self.assertEqual(self.calc.division(-1, 1), -1)
-        self.assertEqual(self.calc.division(-1, -1), 1)
+        self.assertEqual(self.calc.divide(10, 2), 5)
+        self.assertEqual(self.calc.divide(-1, 1), -1)
+        self.assertEqual(self.calc.divide(-1, -1), 1)
         with self.assertRaises(ValueError):
             calc.divide(10, 0)
