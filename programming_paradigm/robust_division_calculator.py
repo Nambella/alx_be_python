@@ -11,6 +11,13 @@ def main():
 
     result = safe_divide(numerator, denominator)
     print(result)
-
+def robust_division(a, b):
+    try:
+        result = a / b
+    except ZeroDivisionError:
+        return "Error: Division by zero is not allowed."
+    except TypeError:
+        return "Error: Invalid input type. Please provide numbers."
+    return result
 if __name__ == "__main__":
     main()
