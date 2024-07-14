@@ -8,3 +8,14 @@ def safe_divide(numerator, denominator):
     except ValueError:
         return "Error: Non-numeric input provided. Please enter valid numbers."
     return result
+def robust_division_calculator(num1, num2):
+    try:
+        result = num1 / num2
+    except ZeroDivisionError:
+        return "Error: Cannot divide by zero."
+    return result
+
+# Example usage
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+print(robust_division_calculator(num1, num2))
