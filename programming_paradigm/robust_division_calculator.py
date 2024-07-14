@@ -19,5 +19,16 @@ def robust_division(a, b):
     except TypeError:
         return "Error: Invalid input type. Please provide numbers."
     return result
+
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+print(robust_division(num1, num2))
+try:
+    num1 = float(num1)
+    num2 = float(num2)
+except ValueError:
+    print("Error: Please enter valid numbers.")
+else:
+    print(robust_division(num1, num2))
 if __name__ == "__main__":
     main()
