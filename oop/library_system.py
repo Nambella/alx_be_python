@@ -36,8 +36,8 @@ class Library:
 # Example usage:
 if __name__ == "__main__":
     library = Library()
-    ebook1 = EBook("Python Basics", "John Doe", 5)
-    printbook1 = PrintBook("Data Structures", "Jane Smith", 300)
+    ebook1 = EBook("Snow Crash", "Neal Stephenson", 500)
+    printbook1 = PrintBook("The Catcher in the Rye", "J.D. Salinger", 234)
     library.add_book(ebook1)
     library.add_book(printbook1)
     library.list_books()
