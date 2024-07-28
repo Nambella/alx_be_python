@@ -42,7 +42,7 @@ class Library:
 # Example usage:
 if __name__ == "__main__":
     library = Library()
-    classic_book = Book ("Pride and Prejudice", "Jane Austen")
+    classic_book = Book("Pride and Prejudice", "Jane Austen")
     ebook1 = EBook("Snow Crash", "Neal Stephenson", 500)
     printbook1 = PrintBook("The Catcher in the Rye", "J.D. Salinger", 234)
     library.add_book(classic_book)
